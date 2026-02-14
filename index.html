@@ -1,32 +1,88 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Click Speed Game</title>
+  <title>🐉 Dragon vs Developer</title>
   <style>
     body {
-      text-align: center;
-      font-family: Arial;
-      background: #111;
+      background: radial-gradient(circle at center, #1a1a1a, #000);
       color: white;
+      text-align: center;
+      font-family: Arial, sans-serif;
     }
+
+    h1 {
+      color: #ff4d4d;
+    }
+
+    .dragon {
+      font-size: 100px;
+      margin: 20px;
+    }
+
     button {
-      padding: 20px;
-      font-size: 20px;
+      padding: 15px 30px;
+      font-size: 18px;
+      background: #ff4d4d;
+      color: white;
+      border: none;
+      border-radius: 8px;
       cursor: pointer;
+      margin-top: 15px;
+    }
+
+    button:hover {
+      background: #cc0000;
+    }
+
+    .health {
+      font-size: 20px;
+      margin: 10px;
     }
   </style>
 </head>
 <body>
-  <h1>Click Challenge 🔥</h1>
-  <p>Clicks: <span id="count">0</span></p>
-  <button onclick="clickMe()">Click Me!</button>
+
+  <h1>🐉 Dragon vs Developer 💻</h1>
+  <div class="dragon">🐲</div>
+
+  <div class="health">
+    Dragon Health: <span id="dragonHealth">100</span>
+  </div>
+
+  <div class="health">
+    Your Health: <span id="playerHealth">100</span>
+  </div>
+
+  <button onclick="attack()">⚔ Attack Dragon</button>
 
   <script>
-    let count = 0;
-    function clickMe() {
-      count++;
-      document.getElementById("count").innerText = count;
+    let dragon = 100;
+    let player = 100;
+
+    function attack() {
+      if (dragon <= 0 || player <= 0) return;
+
+      let playerDamage = Math.floor(Math.random() * 20);
+      let dragonDamage = Math.floor(Math.random() * 15);
+
+      dragon -= playerDamage;
+      player -= dragonDamage;
+
+      if (dragon < 0) dragon = 0;
+      if (player < 0) player = 0;
+
+      document.getElementById("dragonHealth").innerText = dragon;
+      document.getElementById("playerHealth").innerText = player;
+
+      if (dragon === 0) {
+        alert("🔥 You defeated the Dragon!");
+      }
+
+      if (player === 0) {
+        alert("💀 The Dragon burned you!");
+      }
     }
   </script>
+
 </body>
 </html>
