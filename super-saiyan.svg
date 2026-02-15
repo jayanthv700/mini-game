@@ -1,39 +1,55 @@
 <svg width="800" height="220" xmlns="http://www.w3.org/2000/svg">
 
-  <style>
-    .power {
-      font-family: Arial, sans-serif;
-      font-size: 28px;
-      font-weight: bold;
-      animation: glow 1.5s infinite alternate;
-    }
-
-    @keyframes glow {
-      0% { fill: white; }
-      100% { fill: #FFD700; }
-    }
-  </style>
-
   <rect width="100%" height="100%" fill="#0D1117"/>
 
-  <text x="50%" y="40" text-anchor="middle" class="power">
-    Powered by Super Saiyan Mode ⚡
+  <text x="50%" y="40" text-anchor="middle" font-size="28" font-weight="bold">
+    <tspan fill="white">
+      Powered by Super Saiyan Mode ⚡
+      <animate attributeName="fill"
+               values="white;#FFD700;white"
+               dur="2s"
+               repeatCount="indefinite"/>
+    </tspan>
   </text>
 
-  <text x="50%" y="90" text-anchor="middle" class="power" font-size="20">
-    Java Backend Developer with strong fundamentals
+  <text x="50%" y="90" text-anchor="middle" font-size="20">
+    <tspan fill="white">
+      Java Backend Developer with strong fundamentals
+      <animate attributeName="fill"
+               values="white;#FFD700;white"
+               dur="2s"
+               repeatCount="indefinite"/>
+    </tspan>
   </text>
 
-  <text x="50%" y="125" text-anchor="middle" class="power" font-size="20">
-    Skilled in Spring Boot, REST APIs, Hibernate, MySQL
+  <text x="50%" y="125" text-anchor="middle" font-size="20">
+    <tspan fill="white">
+      Skilled in Spring Boot, REST APIs, Hibernate, MySQL
+      <animate attributeName="fill"
+               values="white;#FFD700;white"
+               dur="2s"
+               repeatCount="indefinite"/>
+    </tspan>
   </text>
 
-  <text x="50%" y="160" text-anchor="middle" class="power" font-size="20">
-    Focused on clean architecture & performance
+  <text x="50%" y="160" text-anchor="middle" font-size="20">
+    <tspan fill="white">
+      Focused on clean architecture &amp; performance
+      <animate attributeName="fill"
+               values="white;#FFD700;white"
+               dur="2s"
+               repeatCount="indefinite"/>
+    </tspan>
   </text>
 
-  <text x="50%" y="195" text-anchor="middle" class="power" font-size="20">
-    Preparing seriously for backend interviews ⚔
+  <text x="50%" y="195" text-anchor="middle" font-size="20">
+    <tspan fill="white">
+      Preparing seriously for backend interviews ⚔
+      <animate attributeName="fill"
+               values="white;#FFD700;white"
+               dur="2s"
+               repeatCount="indefinite"/>
+    </tspan>
   </text>
 
 </svg>
